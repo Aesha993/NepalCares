@@ -19,4 +19,8 @@ router.get('/contact', function(req, res, next) {
   res.render('contact', { title: 'NepalCares' });
 });
 
+router.get('/joinus', function(req, res, next) {
+  res.render('joinus', { title: 'NepalCares' });
+});
+
 module.exports = router;

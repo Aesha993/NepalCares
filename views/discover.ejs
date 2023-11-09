@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover page</title>
   <link rel="stylesheet" href="globals.css" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
@@ -83,7 +85,6 @@
       line-height: normal;
     }
 
-
     .discover .overlap {
       width: 42px;
       height: 40px;
@@ -104,7 +105,6 @@
       font-size: 20px;
       /* Adjust the size of the search icon */
     }
-
 
 
     .discover .material-symbols {
@@ -221,113 +221,57 @@
       line-height: normal;
     }
 
-    .discover .break-line {
-      position: absolute;
-      width: 1006px;
-      height: 6px;
-      top: 308px;
-      left: 137px;
-      object-fit: cover;
+
+    h1 {
+      font-size: 36px;
+      font-weight: 600;
     }
 
-    .discover .suggested-profiles {
-      position: absolute;
-      width: 989px;
-      height: 423px;
-      top: 416px;
-      left: 145px;
+
+    .need-col:hover {
+      box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
     }
 
-    .discover .rectangle {
-      height: 278px;
-      top: 0;
-      left: 0;
-      position: absolute;
-      width: 196px;
-      background-color: #d9d9d9;
+    @media(max-width: 700px) {
+      .row {
+        flex-direction: column;
+      }
+    }
+
+    .help {
+      width: 80%;
+      margin: auto;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    .row {
+      margin-top: 5%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .need-col {
+      flex-basis: 31%;
+      border-radius: 10px;
+      margin-bottom: 5%;
+      text-align: left;
+
+    }
+
+    .need-col img {
+      width: 100%;
       border-radius: 10px;
     }
 
-    .discover .rectangle-2 {
-      height: 278px;
-      top: 0;
-      left: 274px;
-      position: absolute;
-      width: 196px;
-      background-color: #d9d9d9;
-      border-radius: 10px;
+    .need-col p {
+      padding: 0;
     }
 
-    .discover .rectangle-3 {
-      height: 278px;
-      top: 0;
-      left: 525px;
-      position: absolute;
-      width: 196px;
-      background-color: #d9d9d9;
-      border-radius: 10px;
-    }
-
-    .discover .rectangle-4 {
-      height: 278px;
-      top: 0;
-      left: 789px;
-      position: absolute;
-      width: 196px;
-      background-color: #d9d9d9;
-      border-radius: 10px;
-    }
-
-    .discover .rectangle-5 {
-      height: 84px;
-      top: 339px;
-      left: 4px;
-      position: absolute;
-      width: 196px;
-      background-color: #d9d9d9;
-      border-radius: 10px;
-    }
-
-    .discover .rectangle-6 {
-      height: 84px;
-      top: 339px;
-      left: 278px;
-      position: absolute;
-      width: 196px;
-      background-color: #d9d9d9;
-      border-radius: 10px;
-    }
-
-    .discover .rectangle-7 {
-      height: 84px;
-      top: 339px;
-      left: 529px;
-      position: absolute;
-      width: 196px;
-      background-color: #d9d9d9;
-      border-radius: 10px;
-    }
-
-    .discover .rectangle-8 {
-      height: 84px;
-      top: 339px;
-      left: 793px;
-      position: absolute;
-      width: 196px;
-      background-color: #d9d9d9;
-      border-radius: 10px;
-    }
-
-    .discover .text-wrapper-8 {
-      position: absolute;
-      top: 348px;
-      left: 603px;
-      font-family: "Poppins-Medium", Helvetica;
-      font-weight: 500;
-      color: #161923;
-      font-size: 20px;
-      letter-spacing: 0;
-      line-height: normal;
+    .need-col h3 {
+      margin-top: 16px;
+      margin-bottom: 15px;
+      text-align: left;
     }
   </style>
   <div class="discover">
@@ -341,31 +285,63 @@
         </div>
         <div class="overlap"><i class="uil uil-search"></i></div>
       </div>
+
       <div class="navbar">
         <div class="overlap-2">
           <img class="vector" src="img/image.svg" /> <img class="img" src="img/vector.svg" />
         </div>
-        <p class="nepal-cares"><span class="text-wrapper">Nepal</span> <span class="span">Cares</span></p>
+        <!--<p class="nepal-cares"><span class="text-wrapper">Nepal</span> <span class="span">Cares</span></p>
+        -->
         <div class="text-wrapper-3"><a href="/" style="color: #000000">Home</a></div>
         <div class="text-wrapper-4"><a href="/about" style="color: #000000">About</a></div>
         <div class="text-wrapper-5"><a href="/discover" style="color: #000000">Discover</a></div>
         <div class="text-wrapper-6"><a href="/contact" style="color: #000000">Contact</a></div>
         <div class="text-wrapper-7"><a href="/joinus" style="color: #000000">Join us</a></div>
       </div>
-      <img class="break-line" src="img/break-line.svg" />
-      <div class="suggested-profiles">
-        <div class="rectangle"></div>
-        <div class="rectangle-2"></div>
-        <div class="rectangle-3"></div>
-        <div class="rectangle-4"></div>
-        <div class="rectangle-5"></div>
-        <div class="rectangle-6"></div>
-        <div class="rectangle-7"></div>
-        <div class="rectangle-8"></div>
-      </div>
-      <div class="text-wrapper-8">Explore</div>
+
     </div>
+
   </div>
+
+
+
+
+
+  <!-- Section to explore receiver-->
+  <section class="help">
+    <h1> Whom we support</h1>
+    <p> Let's listen the story of our people who are supported during their needs. </p>
+
+    <div class="row">
+      <div class="need-col">
+        <img src="#" alt="image of people">
+        <h3>John</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero cupiditate, consequatur architecto illum
+          repellat molestiae asperiores aliquam ipsam pariatur in excepturi dicta nesciunt vitae! Dicta excepturi animi
+          cum ratione nihil.</p>
+      </div>
+
+      <div class="need-col">
+        <img src="img/Logo.png" alt="image of people">
+        <h3>Kumar</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero cupiditate, consequatur architecto illum
+          repellat molestiae asperiores aliquam ipsam pariatur in excepturi dicta nesciunt vitae! Dicta excepturi animi
+          cum ratione nihil.</p>
+      </div>
+
+      <div class="need-col">
+        <img src="#" alt="image of people">
+        <h3>Sam</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero cupiditate, consequatur architecto illum
+          repellat molestiae asperiores aliquam ipsam pariatur in excepturi dicta nesciunt vitae! Dicta excepturi animi
+          cum ratione nihil.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
 </body>
 
 </html>

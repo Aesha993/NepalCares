@@ -277,6 +277,59 @@
     .search-results .text-wrapper-3 {
       color: #ffffff;
     }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 600;
+    }
+
+
+    .need-col:hover {
+      box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    @media(max-width: 700px) {
+      .row {
+        flex-direction: column;
+      }
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      /* Adjust this based on your preference */
+    }
+
+    .card-list {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 10px;
+    }
+
+    .card {
+      flex: 0 0 29%;
+      /* Adjust this width percentage to fit three cards in a row with some space */
+      margin-bottom: 20px;
+      /* Adjust as needed */
+      padding: 20px;
+      /* Add border styles as desired */
+      border-radius: 5px;
+      /* Add border radius for rounded corners */
+    }
+
+    .need-col {
+      text-align: left;
+      /* Adjust as needed */
+    }
+
+    .need-col img {
+      width: 100%;
+      /* Adjust as needed */
+      border-radius: 5px;
+      /* Add border radius for image */
+    }
   </style>
   <div class="search-results">
     <div class="div">
@@ -285,45 +338,54 @@
       </p>
       <div class="search-bar">
         <input class="overlap-group">
-        </div>
-        <div class="overlap"><img class="material-symbols" src="img/material-symbols-search.svg" /></div>
       </div>
-      <img class="break-line" src="img/break-line.svg" />
-      <div class="div-2">
-        <div class="row">
-          <ul>
-            <% donateList.forEach(function(book) { %>
-              <li>Book ID: <%= book.id %>, Details: <%= book.details %></li>
-            <% }) %>
-          </ul>
-        </div>
-        
-      </div>
-      <p class="search-results-for">
-        <span class="text-wrapper">Search Results for </span> <span class="span">John Doe</span>
-      </p>
-      <div class="filter-search">
-        <div class="text-wrapper-2">Filter</div>
-        <img class="octicon-filter" src="img/octicon-filter-16.svg" />
-      </div>
-      <footer class="footer">
-        <div class="overlap-2">
-          <div class="phone">
-            <div class="element">+977 9812345678</div>
-            <img class="ph-phone-light" src="img/ph-phone-light.svg" />
-          </div>
-          <div class="email">
-            <div class="info-nepalcares-org">info@nepalcares.org</div>
-            <img class="img" src="img/material-symbols-mail-outline.svg" />
-          </div>
-          <img class="social-media" src="img/social-media.png" />
-          <p class="copyright">
-            <span class="text-wrapper">Copyright © 2023 NepalCares</span>
-            <span class="text-wrapper-3"> | All Rights Reserved</span>
-          </p>
-        </div>
-      </footer>
+      <div class="overlap"><img class="material-symbols" src="img/material-symbols-search.svg" /></div>
     </div>
+    <img class="break-line" src="img/break-line.svg" />
+    <div class="div-2">
+      <div class="row">
+        <ul class="card-list">
+          <% donateList.forEach(function(user) { %>
+            <li class="card">
+              <div class="need-col">
+                <img src="#" alt="image of people">
+                <h3>Username: <%= user.id %>
+                </h3>
+                <p>Details: <%= user.details %>
+                </p>
+              </div>
+            </li>
+            <% }) %>
+        </ul>
+      </div>
+
+
+    </div>
+    <p class="search-results-for">
+      <span class="text-wrapper">Search Results for </span> <span class="span">John Doe</span>
+    </p>
+    <div class="filter-search">
+      <div class="text-wrapper-2">Filter</div>
+      <img class="octicon-filter" src="img/octicon-filter-16.svg" />
+    </div>
+    <!--<footer class="footer">
+      <div class="overlap-2">
+        <div class="phone">
+          <div class="element">+977 9812345678</div>
+          <img class="ph-phone-light" src="img/ph-phone-light.svg" />
+        </div>
+        <div class="email">
+          <div class="info-nepalcares-org">info@nepalcares.org</div>
+          <img class="img" src="img/material-symbols-mail-outline.svg" />
+        </div>
+        <img class="social-media" src="img/social-media.png" />
+        <p class="copyright">
+          <span class="text-wrapper">Copyright © 2023 NepalCares</span>
+          <span class="text-wrapper-3"> | All Rights Reserved</span>
+        </p>
+      </div>
+    </footer> -->
+  </div>
   </div>
 </body>
 

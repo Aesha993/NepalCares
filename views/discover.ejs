@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,9 +13,14 @@
 
 <body>
   <style>
+    @media(max-width: 700px) {
+      .discover {
+        flex-direction: column;
+      }
+    }
+
     .discover {
       background-color: #ffffff;
-      display: flex;
       flex-direction: row;
       justify-content: center;
       width: 100%;
@@ -24,7 +30,7 @@
       background-color: #ffffff;
       overflow: hidden;
       width: 1280px;
-      height: 832px;
+      height: 270px;
       position: relative;
     }
 
@@ -273,6 +279,57 @@
       margin-bottom: 15px;
       text-align: left;
     }
+
+    @media(max-width: 700px) {
+      .row {
+        flex-direction: column;
+      }
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      /* Adjust this based on your preference */
+    }
+
+    .card-list {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 10px;
+    }
+
+    .card {
+      flex: 0 0 29%;
+      /* Adjust this width percentage to fit three cards in a row with some space */
+      margin-bottom: 20px;
+      /* Adjust as needed */
+      padding: 20px;
+      /* Add border styles as desired */
+      border-radius: 5px;
+      /* Add border radius for rounded corners */
+    }
+
+    .need-col {
+      text-align: left;
+      /* Adjust as needed */
+    }
+
+    .need-col img {
+      width: 100%;
+      /* Adjust as needed */
+      border-radius: 5px;
+      /* Add border radius for image */
+    }
+
+    .navbar .overlap-2 .vector {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      top: 0px;
+      
+    }
   </style>
   <div class="discover">
     <div class="div">
@@ -288,7 +345,7 @@
 
       <div class="navbar">
         <div class="overlap-2">
-          <img class="vector" src="img/image.svg" /> <img class="img" src="img/vector.svg" />
+          <img class="vector" src="images/logo.png" />
         </div>
         <!--<p class="nepal-cares"><span class="text-wrapper">Nepal</span> <span class="span">Cares</span></p>
         -->
@@ -309,34 +366,29 @@
     <p>Hello, Beautiful soul. Let's listen the story of our people who are supported during their needs. </p>
 
     <div class="row">
-      <div class="need-col">
-        <img src="images/child2.jpg" alt="image of people">
-        <h3>John</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero cupiditate, consequatur architecto illum
-          repellat molestiae asperiores aliquam ipsam pariatur in excepturi dicta nesciunt vitae! Dicta excepturi animi
-          cum ratione nihil.</p>
-      </div>
-
-      <div class="need-col">
-        <img src="images/child3.jpg" alt="image of people">
-        <h3>Kumar</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero cupiditate, consequatur architecto illum
-          repellat molestiae asperiores aliquam ipsam pariatur in excepturi dicta nesciunt vitae! Dicta excepturi animi
-          cum ratione nihil.</p>
-      </div>
-
-      <div class="need-col">
-        <img src="images/child1.jpg" alt="image of people">
-        <h3>Sam</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero cupiditate, consequatur architecto illum
-          repellat molestiae asperiores aliquam ipsam pariatur in excepturi dicta nesciunt vitae! Dicta excepturi animi
-          cum ratione nihil.</p>
-      </div>
+      <ul class="card-list">
+        <% donateList.forEach(function(user) { %>
+          <li class="card">
+            <div class="need-col">
+              <img src="images/Dummy-Icon.jpg" alt="image of people">
+              <h3>Username: <%= user.id %>
+              </h3>
+              <p>Details: <%= user.details %>
+              </p>
+              <button class="text-wrapper-3"><a href="/joinus" style="color: #000000">Donate now</a>
+            </div>
+          </li>
+          <% }) %>
+      </ul>
+    </div>
 
     </div>
 
   </section>
-
+  
+  <footer>
+    <%- include('./footer'); %>
+  </footer>
 
 </body>
 

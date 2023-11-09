@@ -8,6 +8,12 @@
 
 <body>
     <style>
+         .about {
+            background-image: url('/images/donate.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
         .about {
             background-color: #ffffff;
             display: flex;
@@ -41,10 +47,11 @@
 
         .about .vector {
             position: absolute;
-            width: 27px;
-            height: 26px;
-            top: 30px;
-            left: 0;
+            width: 150px;
+            height: 150px;
+            top: 0px;
+            right: 50px;
+            left: -50px;
         }
 
         .about .img {
@@ -208,89 +215,26 @@
             line-height: normal;
         }
 
-        .about .footer {
-            position: absolute;
-            width: 1280px;
-            height: 72px;
-            top: 760px;
-            left: 0;
-            background-color: #c95501;
-        }
+      
+        
 
-        .about .phone {
-            position: absolute;
-            width: 139px;
-            height: 19px;
-            top: 14px;
-            left: 79px;
-        }
 
-        .about .element {
-            position: absolute;
-            top: 0;
-            left: 31px;
-            font-family: "Poppins-Regular", Helvetica;
-            font-weight: 400;
-            color: #ffffff;
-            font-size: 12px;
-            letter-spacing: 0;
-            line-height: normal;
-        }
+        
 
-        .about .ph-phone-light {
-            position: absolute;
-            width: 20px;
-            height: 18px;
-            top: 1px;
-            left: 0;
-        }
-
-        .about .email {
-            position: absolute;
-            width: 165px;
-            height: 18px;
-            top: 36px;
-            left: 79px;
-        }
-
-        .about .info-nepalcares-org {
-            position: absolute;
-            top: 0;
-            left: 34px;
-            font-family: "Poppins-Regular", Helvetica;
-            font-weight: 400;
-            color: #ffffff;
-            font-size: 12px;
-            letter-spacing: 0;
-            line-height: normal;
-        }
-
-        .about .material-symbols {
-            position: absolute;
-            width: 20px;
-            height: 18px;
-            top: 0;
-            left: 0;
-        }
-
-        .about .social-media {
-            position: absolute;
-            width: 128px;
-            height: 25px;
-            top: 26px;
-            left: 1022px;
-        }
+        
+    
     </style>
     <div class="about">
-        <div class="div">
+        <div class="div"> 
             <div class="navbar">
                 <div class="overlap-group">
-                    <img class="vector" src="img/vector.svg" /> <img class="img" src="img/image.svg" />
+                    <img class="vector" src="images/logo.png" />
                 </div>
-                <p class="nepal-cares"><span class="text-wrapper" style="font-size: 60px;">Nepal</span> <span class="span" style="font-size:60px">Cares</span></p>
+                <p class="nepal-cares"><span class="text-wrapper" style="font-size: 60px;">Nepal</span> <span
+                        class="span" style="font-size:60px">Cares</span></p>
                 <div class="text-wrapper-2" href="/">
-                  <a href="/" style="color:#000000">Home</a>
-              </div>
+                    <a href="/" style="color:#000000">Home</a>
+                </div>
                 <div class="text-wrapper-3"><a href="/about" style="color:#000000">About</a>
                 </div>
                 <div class="text-wrapper-4"><a href="/Discover" style="color:#000000;">Discover</a>
@@ -299,7 +243,7 @@
                 </div>
                 <div class="text-wrapper-6"><a href="/joinus" style="color:#000000">Join Us</a>
                 </div>
-              </div>
+            </div>
             <div class="text-wrapper-7">Join Us</div>
             <div class="text-wrapper-8">
                 <a href="/signuppage" style="color: #000000;">Sign Up</a>
@@ -309,19 +253,14 @@
                 <div class="text-wrapper-10">Already have an account</div>
             </div>
             <p class="and-donate-to">And donate to millions of people who need your help Right&nbsp;&nbsp;Now !!</p>
-            <footer class="footer">
-                <div class="phone">
-                    <div class="element">+977 9812345678</div>
-                    <img class="ph-phone-light" src="img/ph-phone-light.svg" />
-                </div>
-                <div class="email">
-                    <div class="info-nepalcares-org">info@nepalcares.org</div>
-                    <img class="material-symbols" src="img/material-symbols-mail-outline.svg" />
-                </div>
-                <img class="social-media" src="img/social-media.png" />
-            </footer>
+          
         </div>
     </div>
+
+    <footer>
+        <%- include('./footer'); %>
+      </footer>
+    
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const donations = require('../models/donate.js')
+const Description = require('../models/donate')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -11,8 +11,16 @@ router.get('/about', function(req, res, next) {
   res.render('about', { title: 'NepalCares' });
 });
 
-router.get('/discover', function(req, res, next) {
-  res.render('discover', { title: 'NepalCares' });
+router.get('/discover', async (req, res, next) => {
+  try {
+    console.log()
+    const donateList = await Description.find();
+    console.log(donateList);
+    res.render('discover', { title: 'Discover', donateList: donateList });
+  } catch (error) {
+    console.error(error);
+    next(error);
+  }
 });
 
 router.get('/contact', function(req, res, next) {

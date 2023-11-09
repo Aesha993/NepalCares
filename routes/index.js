@@ -23,4 +23,8 @@ router.get('/joinus', function(req, res, next) {
   res.render('joinus', { title: 'NepalCares' });
 });
 
+router.get('/cardpayment', function(req, res, next) {
+  res.render('cardpayment', { title: 'NepalCares' });
+});
+
 module.exports = router;

@@ -12,6 +12,7 @@ var signupRouter = require('./routes/signuppage');
 var profileRouter = require('./routes/profilepage');
 var signinRouter = require('./routes/signinpage');
 var donationRouter = require('./routes/donations');
+var footerRouter = require('./routes/footer');
 
 
 var app = express();
@@ -36,7 +37,10 @@ app.use('/users', usersRouter);
 app.use('/signuppage', signupRouter);
 app.use('/profilepage', profileRouter);
 app.use('/signinpage',signinRouter);
-app.use('/donation',donationRouter)
+app.use('/donation',donationRouter);
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

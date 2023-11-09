@@ -1,74 +1,330 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donations</title>
+  <link rel="stylesheet" href="globals.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-<style>
-* {box-sizing: border-box;}
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-.topnav {
-  overflow: hidden;
-  background-color: #e9e9e9;
-}
-
-.topnav a {
-  float: left;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-
-.topnav a.active {
-  background-color: #834124;
-  color: white;
-}
-
-.topnav input[type=text] {
-  float: right;
-  padding: 6px;
-  margin-top: 8px;
-  margin-right: 16px;
-  border: none;
-  font-size: 17px;
-  width: 85%;
-}
-
-@media screen and (max-width: 600px) {
-  .topnav a, .topnav input[type=text] {
-    float: none;
-    display: block;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-    padding: 14px;
-  }
-  
-  .topnav input[type=text] {
-    border: 1px solid #ccc;  
-  }
-}
-</style>
-</head>
 <body>
+  <style>
+    .search-results {
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+    }
 
-<div class="topnav">
-    <input type="text" placeholder="Search..">
-    <a class="active" href="/">Home</a>
-  
-</div>
+    .search-results .div {
+      background-color: #ffffff;
+      overflow: hidden;
+      width: 1280px;
+      height: 832px;
+      position: relative;
+    }
 
+    .search-results .discover-those-in {
+      position: absolute;
+      width: 439px;
+      top: 58px;
+      left: 395px;
+      font-family: "Lora-Bold", Helvetica;
+      font-weight: 700;
+      color: transparent;
+      font-size: 40px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
 
+    .search-results .text-wrapper {
+      color: #161923;
+    }
 
+    .search-results .span {
+      color: #c95501;
+    }
+
+    .search-results .search-bar {
+      position: absolute;
+      width: 612px;
+      height: 40px;
+      top: 192px;
+      left: 309px;
+    }
+
+    .search-results .overlap-group {
+      position: absolute;
+      width: 560px;
+      height: 40px;
+      top: 0;
+      left: 0;
+      background-color: #ffffff;
+      border-radius: 10px;
+      border: 1px solid;
+      border-color: #161923;
+    }
+
+    .search-results .search {
+      position: absolute;
+      top: 6px;
+      left: 17px;
+      font-family: "Poppins-Regular", Helvetica;
+      font-weight: 400;
+      color: #000000;
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .search-results .overlap {
+      position: absolute;
+      width: 42px;
+      height: 40px;
+      top: 0;
+      left: 570px;
+      background-color: #c95501;
+      border-radius: 10px;
+    }
+
+    .search-results .material-symbols {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 8px;
+      left: 9px;
+    }
+
+    .search-results .break-line {
+      position: absolute;
+      width: 1006px;
+      height: 6px;
+      top: 305px;
+      left: 131px;
+      object-fit: cover;
+    }
+
+    .search-results .div-2 {
+      position: absolute;
+      width: 1049px;
+      height: 301px;
+      top: 416px;
+      left: 145px;
+    }
+
+    .search-results .rectangle {
+      left: 0;
+      position: absolute;
+      width: 285px;
+      height: 301px;
+      top: 0;
+      background-color: #d9d9d9;
+      border-radius: 10px;
+    }
+
+    .search-results .rectangle-2 {
+      left: 382px;
+      position: absolute;
+      width: 285px;
+      height: 301px;
+      top: 0;
+      background-color: #d9d9d9;
+      border-radius: 10px;
+    }
+
+    .search-results .rectangle-3 {
+      left: 764px;
+      position: absolute;
+      width: 285px;
+      height: 301px;
+      top: 0;
+      background-color: #d9d9d9;
+      border-radius: 10px;
+    }
+
+    .search-results .search-results-for {
+      position: absolute;
+      top: 348px;
+      left: 510px;
+      font-family: "Poppins-Medium", Helvetica;
+      font-weight: 500;
+      color: transparent;
+      font-size: 20px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .search-results .filter-search {
+      position: absolute;
+      width: 63px;
+      height: 23px;
+      top: 352px;
+      left: 1079px;
+    }
+
+    .search-results .text-wrapper-2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: "Poppins-Medium", Helvetica;
+      font-weight: 500;
+      color: #161923;
+      font-size: 15px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .search-results .octicon-filter {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 4px;
+      left: 45px;
+    }
+
+    .search-results .footer {
+      position: absolute;
+      width: 1282px;
+      height: 72px;
+      top: 761px;
+      left: 0;
+      background-color: transparent;
+    }
+
+    .search-results .overlap-2 {
+      position: relative;
+      width: 1280px;
+      height: 72px;
+      background-color: #c95501;
+    }
+
+    .search-results .phone {
+      position: absolute;
+      width: 139px;
+      height: 19px;
+      top: 14px;
+      left: 79px;
+    }
+
+    .search-results .element {
+      position: absolute;
+      top: 0;
+      left: 31px;
+      font-family: "Poppins-Regular", Helvetica;
+      font-weight: 400;
+      color: #ffffff;
+      font-size: 12px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .search-results .ph-phone-light {
+      position: absolute;
+      width: 20px;
+      height: 18px;
+      top: 1px;
+      left: 0;
+    }
+
+    .search-results .email {
+      position: absolute;
+      width: 165px;
+      height: 18px;
+      top: 36px;
+      left: 79px;
+    }
+
+    .search-results .info-nepalcares-org {
+      position: absolute;
+      top: 0;
+      left: 34px;
+      font-family: "Poppins-Regular", Helvetica;
+      font-weight: 400;
+      color: #ffffff;
+      font-size: 12px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .search-results .img {
+      position: absolute;
+      width: 20px;
+      height: 18px;
+      top: 0;
+      left: 0;
+    }
+
+    .search-results .social-media {
+      position: absolute;
+      width: 128px;
+      height: 25px;
+      top: 26px;
+      left: 1022px;
+    }
+
+    .search-results .copyright {
+      position: absolute;
+      top: 27px;
+      left: 490px;
+      font-family: "Poppins-Regular", Helvetica;
+      font-weight: 400;
+      color: transparent;
+      font-size: 12px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
+
+    .search-results .text-wrapper-3 {
+      color: #ffffff;
+    }
+  </style>
+  <div class="search-results">
+    <div class="div">
+      <p class="discover-those-in">
+        <span class="text-wrapper">Discover</span> <span class="span"> those in need</span>
+      </p>
+      <div class="search-bar">
+        <input class="overlap-group">
+        </div>
+        <div class="overlap"><img class="material-symbols" src="img/material-symbols-search.svg" /></div>
+      </div>
+      <img class="break-line" src="img/break-line.svg" />
+      <div class="div-2">
+        <div class="row">
+          <ul>
+            <% donateList.forEach(function(book) { %>
+              <li>Book ID: <%= book.id %>, Details: <%= book.details %></li>
+            <% }) %>
+          </ul>
+        </div>
+        
+      </div>
+      <p class="search-results-for">
+        <span class="text-wrapper">Search Results for </span> <span class="span">John Doe</span>
+      </p>
+      <div class="filter-search">
+        <div class="text-wrapper-2">Filter</div>
+        <img class="octicon-filter" src="img/octicon-filter-16.svg" />
+      </div>
+      <footer class="footer">
+        <div class="overlap-2">
+          <div class="phone">
+            <div class="element">+977 9812345678</div>
+            <img class="ph-phone-light" src="img/ph-phone-light.svg" />
+          </div>
+          <div class="email">
+            <div class="info-nepalcares-org">info@nepalcares.org</div>
+            <img class="img" src="img/material-symbols-mail-outline.svg" />
+          </div>
+          <img class="social-media" src="img/social-media.png" />
+          <p class="copyright">
+            <span class="text-wrapper">Copyright © 2023 NepalCares</span>
+            <span class="text-wrapper-3"> | All Rights Reserved</span>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </div>
 </body>
+
 </html>

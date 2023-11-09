@@ -1,114 +1,237 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donor Profile</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
 
-
+<body>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-
-        header {
-            background-color: #3498db;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .user-profile {
+        .about {
+            background-color: #ffffff;
             display: flex;
-            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+            width: 100%;
         }
 
-        .user-profile img {
-            width: 100px;
-            height: 100px;
+        .about .div {
+            background-color: #ffffff;
+            width: 1280px;
+            height: 832px;
+            position: relative;
+        }
+
+        .about .text-wrapper {
+            position: absolute;
+            top: 44px;
+            left: 1142px;
+            font-family: "Poppins-Regular", Helvetica;
+            font-weight: 400;
+            color: #000000;
+            font-size: 20px;
+            letter-spacing: 0;
+            line-height: normal;
+        }
+
+        .about .ellipse {
+            position: absolute;
+            width: 303px;
+            height: 302px;
+            top: 67px;
+            left: 91px;
             border-radius: 50%;
-            margin-right: 20px;
-            border: 2px solid white;
         }
 
-        .container {
-            display: flex;
+        .about .text-wrapper-2 {
+            position: absolute;
+            top: 415px;
+            left: 191px;
+            font-family: "Poppins-Regular", Helvetica;
+            font-weight: 400;
+            color: #000000;
+            font-size: 20px;
+            letter-spacing: 0;
+            line-height: normal;
         }
 
-        .side-menu {
-            width: 250px;
-            background-color: #a73d3de3;
-            color: white;
+        .about .overlap {
+            width: 205px;
+            height: 56px;
+            top: 140px;
+            left: 1012px;
+            background-color: #161923;
+            position: absolute;
+            border-radius: 20px;
         }
 
-        .side-menu ul {
-            list-style: none;
-            padding: 0;
+        .about .text-wrapper-3 {
+            position: absolute;
+            top: 9px;
+            left: 30px;
+            font-family: "Poppins-Regular", Helvetica;
+            font-weight: 400;
+            color: #ffffff;
+            font-size: 24px;
+            letter-spacing: 0;
+            line-height: normal;
+
+            
         }
 
-        .side-menu li {
-            padding: 10px;
-        }
-
-        .side-menu a {
+        .about .text-wrapper-3 a{
             text-decoration: none;
-            color: white;
+            
+
+        }
+        .about .overlap-group {
+            width: 205px;
+            height: 56px;
+            top: 218px;
+            left: 1012px;
+            background-color: #c95501;
+            position: absolute;
+            border-radius: 20px;
         }
 
-        .main-content {
-            flex: 1;
-            padding: 20px;
+        .about .text-wrapper-4 {
+            position: absolute;
+            top: 9px;
+            left: 56px;
+            font-family: "Poppins-Regular", Helvetica;
+            font-weight: 400;
+            color: #ffffff;
+            font-size: 24px;
+            letter-spacing: 0;
+            line-height: normal;
         }
 
-        .section {
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
+        .about .overlap-group-2 {
+            width: 1137px;
+            height: 315px;
+            top: 468px;
+            left: 80px;
+            background-color: #161923c7;
+            position: absolute;
+            border-radius: 20px;
         }
 
-        .section h2 {
-            margin-top: 0;
+        .about .overlap-2 {
+            width: 454px;
+            height: 121px;
+            top: 22px;
+            left: 27px;
+            background-color: #161923d6;
+            position: absolute;
+            border-radius: 20px;
+        }
+
+        .about .text-wrapper-5 {
+            top: 24px;
+            left: 297px;
+            position: absolute;
+            font-family: "Poppins-Regular", Helvetica;
+            font-weight: 400;
+            color: #ffffff;
+            font-size: 24px;
+            letter-spacing: 0;
+            line-height: normal;
+        }
+
+        .about .donations-made {
+            top: 24px;
+            position: absolute;
+            left: 36px;
+            font-family: "Poppins-Regular", Helvetica;
+            font-weight: 400;
+            color: #ffffff;
+            font-size: 24px;
+            letter-spacing: 0;
+            line-height: normal;
+        }
+
+        .about .overlap-3 {
+            width: 454px;
+            height: 121px;
+            top: 170px;
+            left: 27px;
+            background-color: #161923d6;
+            position: absolute;
+            border-radius: 20px;
+        }
+
+        .about .text-wrapper-6 {
+            top: 16px;
+            left: 317px;
+            position: absolute;
+            font-family: "Poppins-Regular", Helvetica;
+            font-weight: 400;
+            color: #ffffff;
+            font-size: 24px;
+            letter-spacing: 0;
+            line-height: normal;
+        }
+
+        .about .text-wrapper-7 {
+            top: 16px;
+            position: absolute;
+            left: 36px;
+            font-family: "Poppins-Regular", Helvetica;
+            font-weight: 400;
+            color: #ffffff;
+            font-size: 24px;
+            letter-spacing: 0;
+            line-height: normal;
+        }
+
+        .about .div-wrapper {
+            width: 596px;
+            height: 267px;
+            top: 24px;
+            left: 511px;
+            background-color: #c95501;
+            position: absolute;
+            border-radius: 20px;
+        }
+
+        .about .text-wrapper-8 {
+            position: absolute;
+            top: 90px;
+            left: 243px;
+            font-family: "Poppins-Regular", Helvetica;
+            font-weight: 400;
+            color: #ffffff;
+            font-size: 48px;
+            letter-spacing: 0;
+            line-height: normal;
         }
     </style>
-</head>
-<body>
-    <header>
-        <h1>Welcome to Your Donor Dashboard</h1>
-        <p>Thank you for your generous contributions!</p>
-        <div class="user-profile">
-            <img src="profile-image.jpg" alt="Profile Image">
+    <div class="about">
+        <div class="div">
+            <div class="text-wrapper"><a href="/" style="color: #000000;">Home</a></div>
+            <img class="ellipse" src="https://cdn.pixabay.com/photo/2020/10/11/19/51/cat-5646889_960_720.jpg" />
+            <div class="text-wrapper-2">Username</div>
+            <div class="overlap">
+                <div class="text-wrapper-3"><a href="/donation" style="color: #ffffff">Donate now</a></div>
+            </div>
+            <div class="overlap-group">
+                <div class="text-wrapper-4">Receive</div>
+            </div>
+            <div class="overlap-group-2">
+                <div class="overlap-2">
+                    <div class="text-wrapper-5">........</div>
+                    <div class="donations-made">Donations&nbsp;&nbsp;Made :</div>
+                </div>
+                <div class="overlap-3">
+                    <div class="text-wrapper-6">........</div>
+                    <div class="text-wrapper-7">Donations Received :</div>
+                </div>
+                <div class="div-wrapper">
+                    <div class="text-wrapper-8">CHART</div>
+                </div>
+            </div>
         </div>
-    </header>
-
-    <div class="container">
-        <nav class="side-menu">
-            <ul>
-                <li><i class="fa-solid fa-house"></i><a href="#dashboard">Dashboard</a></li>
-                <li><a href="#profile">Profile Settings</a></li>
-                <li><a href="#donation-history">Donation History</a></li>
-            </ul>
-            <button id="logout">Logout</button>
-        </nav>
-        <main class="main-content">
-            <section id="dashboard" class="section">
-                <h2>Dashboard</h2>
-                <!-- Dashboard content goes here -->
-            </section>
-            <section id="profile" class="section">
-                <h2>Profile Settings</h2>
-                <!-- Profile settings content goes here -->
-            </section>
-            <section id="donation-history" class="section">
-                <h2>Donation History</h2>
-                <!-- Donation history content goes here -->
-            </section>
-        </main>
     </div>
 </body>
 

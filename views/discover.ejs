@@ -1,351 +1,343 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <style>
-        .discover {
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover page</title>
+  <link rel="stylesheet" href="globals.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
-.discover .div {
-  background-color: #ffffff;
-  overflow: hidden;
-  width: 1280px;
-  height: 832px;
-  position: relative;
-}
+</head>
 
-.discover .discover-those-in {
-  position: absolute;
-  width: 439px;
-  top: 145px;
-  left: 432px;
-  font-family: "Lora-Bold", Helvetica;
-  font-weight: 700;
-  color: transparent;
-  font-size: 40px;
-  letter-spacing: 0;
-  line-height: normal;
-  margin: 8px;
-  padding: 0 5px;
-  justify-content: center;
-}
+<body>
+  <style>
+    .discover {
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+    }
 
-.discover .text-wrapper {
-  color: #161923;
-}
+    .discover .div {
+      background-color: #ffffff;
+      overflow: hidden;
+      width: 1280px;
+      height: 832px;
+      position: relative;
+    }
 
-.discover .span {
-  color: #c95501;
-}
+    .discover .discover-those-in {
+      position: absolute;
+      width: 439px;
+      top: 145px;
+      left: 432px;
+      font-family: "Lora-Bold", Helvetica;
+      font-weight: 700;
+      color: transparent;
+      font-size: 40px;
+      letter-spacing: 0;
+      line-height: normal;
+      margin: 8px;
+      padding: 0 5px;
+      justify-content: center;
+    }
 
-.discover .search-bar {
-  position: absolute;
-  width: 612px;
-  height: 40px;
-  top: 214px;
-  left: 370px;
-  right: 400px;
-}
+    .discover .text-wrapper {
+      color: #161923;
+    }
 
-.discover .overlap-group {
-  width: 560px;
-  height: 40px;
-  left: 0;
-  background-color: #ffffff;
-  border-radius: 10px;
-  border: 1px solid;
-  border-color: #161923;
-  position: absolute;
-  top: 0;
-}
+    .discover .span {
+      color: #c95501;
+    }
 
-.discover .text-wrapper-2 {
-  position: absolute;
-  top: 6px;
-  left: 17px;
-  font-family: "Poppins-Regular", Helvetica;
-  font-weight: 400;
-  color: #00000070;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
-}
+    .discover .search-bar {
+      position: absolute;
+      width: 612px;
+      height: 40px;
+      top: 214px;
+      left: 370px;
+      right: 400px;
+    }
 
-.discover .overlap {
-  width: 42px;
-  height: 40px;
-  left: 570px;
-  background-color: #c95501;
-  border-radius: 10px;
-  position: absolute;
-  top: 0;
-}
+    .discover .overlap-group {
+      width: 560px;
+      height: 40px;
+      left: 0;
+      background-color: #ffffff;
+      border-radius: 10px;
+      border: 1px solid;
+      border-color: #161923;
+      position: absolute;
+      top: 0;
+    }
 
-.discover .material-symbols {
-  position: absolute;
-  width: 24px;
-  height: 24px;
-  top: 8px;
-  left: 9px;
-}
+    .discover .text-wrapper-2 {
+      position: absolute;
+      top: 6px;
+      left: 17px;
+      font-family: "Poppins-Regular", Helvetica;
+      font-weight: 400;
+      color: #00000070;
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
 
-.discover .navbar {
-  position: absolute;
-  width: 1182px;
-  height: 56px;
-  top: 17px;
-  left: 28px;
-}
+    .discover .overlap {
+      width: 42px;
+      height: 40px;
+      left: 570px;
+      right: 400px;
+      background-color: #c95501;
+      border-radius: 10px;
+      position: absolute;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-.discover .overlap-2 {
-  width: 71px;
-  height: 56px;
-  left: 0;
-  position: absolute;
-  top: 0;
-}
+    .discover .overlap i {
+      color: #121111;
+      /* Change color of the search icon */
+      font-size: 20px;
+      /* Adjust the size of the search icon */
+    }
 
-.discover .vector {
-  position: absolute;
-  width: 27px;
-  height: 26px;
-  top: 30px;
-  left: 0;
-}
 
-.discover .img {
-  position: absolute;
-  width: 46px;
-  height: 48px;
-  top: 0;
-  left: 25px;
-}
+    .discover .material-symbols {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      top: 8px;
+      left: 9px;
+    }
 
-.discover .nepal-cares {
-  position: absolute;
-  width: 141px;
-  top: 17px;
-  left: 80px;
-  font-family: "Poppins-Bold", Helvetica;
-  font-weight: 700;
-  color: transparent;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-}
+    .discover .navbar {
+      position: absolute;
+      width: 1182px;
+      height: 56px;
+      top: 17px;
+      left: 28px;
+    }
 
-.discover .text-wrapper-3 {
-  left: 709px;
-  font-family: "Poppins-Regular", Helvetica;
-  font-weight: 400;
-  position: absolute;
-  top: 18px;
-  color: #161923;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
-}
+    .discover .overlap-2 {
+      width: 71px;
+      height: 56px;
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
 
-.discover .text-wrapper-4 {
-  left: 919px;
-  font-family: "Poppins-Regular", Helvetica;
-  font-weight: 400;
-  position: absolute;
-  top: 18px;
-  color: #161923;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
-}
+    .discover .vector {
+      position: absolute;
+      width: 27px;
+      height: 26px;
+      top: 30px;
+      left: 0;
+    }
 
-.discover .text-wrapper-5 {
-  left: 804px;
-  font-family: "Poppins-Bold", Helvetica;
-  font-weight: 700;
-  position: absolute;
-  top: 18px;
-  color: #161923;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
-}
+    .discover .img {
+      position: absolute;
+      width: 46px;
+      height: 48px;
+      top: 0;
+      left: 25px;
+    }
 
-.discover .text-wrapper-6 {
-  position: absolute;
-  top: 18px;
-  left: 1013px;
-  font-family: "Poppins-Regular", Helvetica;
-  font-weight: 400;
-  color: #161923;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
-}
+    .discover .nepal-cares {
+      position: absolute;
+      width: 141px;
+      top: 17px;
+      left: 80px;
+      font-family: "Poppins-Bold", Helvetica;
+      font-weight: 700;
+      color: transparent;
+      font-size: 20px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+    }
 
-.discover .text-wrapper-7 {
-  position: absolute;
-  top: 18px;
-  left: 1125px;
-  font-family: "Poppins-Regular", Helvetica;
-  font-weight: 400;
-  color: #161923;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: normal;
-}
+    .discover .text-wrapper-3 {
+      left: 709px;
+      font-family: "Poppins-Regular", Helvetica;
+      font-weight: 400;
+      position: absolute;
+      top: 18px;
+      color: #161923;
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
 
-.discover .break-line {
-  position: absolute;
-  width: 1006px;
-  height: 6px;
-  top: 308px;
-  left: 137px;
-  object-fit: cover;
-}
+    .discover .text-wrapper-4 {
+      left: 919px;
+      font-family: "Poppins-Regular", Helvetica;
+      font-weight: 400;
+      position: absolute;
+      top: 18px;
+      color: #161923;
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
 
-.discover .suggested-profiles {
-  position: absolute;
-  width: 989px;
-  height: 423px;
-  top: 416px;
-  left: 145px;
-}
+    .discover .text-wrapper-5 {
+      left: 804px;
+      font-family: "Poppins-Bold", Helvetica;
+      font-weight: 700;
+      position: absolute;
+      top: 18px;
+      color: #161923;
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
 
-.discover .rectangle {
-  height: 278px;
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 196px;
-  background-color: #d9d9d9;
-  border-radius: 10px;
-}
+    .discover .text-wrapper-6 {
+      position: absolute;
+      top: 18px;
+      left: 1013px;
+      font-family: "Poppins-Regular", Helvetica;
+      font-weight: 400;
+      color: #161923;
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
 
-.discover .rectangle-2 {
-  height: 278px;
-  top: 0;
-  left: 274px;
-  position: absolute;
-  width: 196px;
-  background-color: #d9d9d9;
-  border-radius: 10px;
-}
+    .discover .text-wrapper-7 {
+      position: absolute;
+      top: 18px;
+      left: 1125px;
+      font-family: "Poppins-Regular", Helvetica;
+      font-weight: 400;
+      color: #161923;
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: normal;
+    }
 
-.discover .rectangle-3 {
-  height: 278px;
-  top: 0;
-  left: 525px;
-  position: absolute;
-  width: 196px;
-  background-color: #d9d9d9;
-  border-radius: 10px;
-}
 
-.discover .rectangle-4 {
-  height: 278px;
-  top: 0;
-  left: 789px;
-  position: absolute;
-  width: 196px;
-  background-color: #d9d9d9;
-  border-radius: 10px;
-}
+    h1 {
+      font-size: 36px;
+      font-weight: 600;
+    }
 
-.discover .rectangle-5 {
-  height: 84px;
-  top: 339px;
-  left: 4px;
-  position: absolute;
-  width: 196px;
-  background-color: #d9d9d9;
-  border-radius: 10px;
-}
 
-.discover .rectangle-6 {
-  height: 84px;
-  top: 339px;
-  left: 278px;
-  position: absolute;
-  width: 196px;
-  background-color: #d9d9d9;
-  border-radius: 10px;
-}
+    .need-col:hover {
+      box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+    }
 
-.discover .rectangle-7 {
-  height: 84px;
-  top: 339px;
-  left: 529px;
-  position: absolute;
-  width: 196px;
-  background-color: #d9d9d9;
-  border-radius: 10px;
-}
+    @media(max-width: 700px) {
+      .row {
+        flex-direction: column;
+      }
+    }
 
-.discover .rectangle-8 {
-  height: 84px;
-  top: 339px;
-  left: 793px;
-  position: absolute;
-  width: 196px;
-  background-color: #d9d9d9;
-  border-radius: 10px;
-}
+    .help {
+      width: 80%;
+      margin: auto;
+      text-align: center;
+      padding-top: 100px;
+    }
 
-.discover .text-wrapper-8 {
-  position: absolute;
-  top: 348px;
-  left: 603px;
-  font-family: "Poppins-Medium", Helvetica;
-  font-weight: 500;
-  color: #161923;
-  font-size: 20px;
-  letter-spacing: 0;
-  line-height: normal;
-}
+    .row {
+      margin-top: 5%;
+      display: flex;
+      justify-content: space-between;
+    }
 
-    </style>
-    <div class="discover">
-      <div class="div">
-        <p class="discover-those-in">
-          <span class="text-wrapper">Discover</span> <span class="span"> those in need</span>
-        </p>
-        <div class="search-bar">
-          <div class="overlap-group"><div class="text-wrapper-2">Search</div></div>
-          <div class="overlap"><img class="material-symbols" src="img/material-symbols-search.svg" /></div>
+    .need-col {
+      flex-basis: 31%;
+      border-radius: 10px;
+      margin-bottom: 5%;
+      text-align: left;
+
+    }
+
+    .need-col img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .need-col p {
+      padding: 0;
+    }
+
+    .need-col h3 {
+      margin-top: 16px;
+      margin-bottom: 15px;
+      text-align: left;
+    }
+  </style>
+  <div class="discover">
+    <div class="div">
+      <p class="discover-those-in">
+        <span class="text-wrapper">Discover</span> <span class="span"> those in need</span>
+      </p>
+      <div class="search-bar">
+        <div class="overlap-group">
+          <div class="text-wrapper-2">Search</div>
         </div>
-        <div class="navbar">
-          <div class="overlap-2">
-            <img class="vector" src="img/image.svg" /> <img class="img" src="img/vector.svg" />
-          </div>
-          <p class="nepal-cares"><span class="text-wrapper">Nepal</span> <span class="span">Cares</span></p>
-          <div class="text-wrapper-3"><a href="/" style="color: #000000">Home</a></div>
-          <div class="text-wrapper-4"><a href="/about" style="color: #000000">About</a></div>
-          <div class="text-wrapper-5"><a href="/discover" style="color: #000000">Discover</a></div>
-          <div class="text-wrapper-6"><a href="/contact" style="color: #000000">Contact</a></div>
-          <div class="text-wrapper-7"><a href="/joinus" style="color: #000000">Join us</a></div>
-        </div>
-        <img class="break-line" src="img/break-line.svg" />
-        <div class="suggested-profiles">
-          <div class="rectangle"></div>
-          <div class="rectangle-2"></div>
-          <div class="rectangle-3"></div>
-          <div class="rectangle-4"></div>
-          <div class="rectangle-5"></div>
-          <div class="rectangle-6"></div>
-          <div class="rectangle-7"></div>
-          <div class="rectangle-8"></div>
-        </div>
-        <div class="text-wrapper-8">Explore</div>
+        <div class="overlap"><i class="uil uil-search"></i></div>
       </div>
+
+      <div class="navbar">
+        <div class="overlap-2">
+          <img class="vector" src="img/image.svg" /> <img class="img" src="img/vector.svg" />
+        </div>
+        <!--<p class="nepal-cares"><span class="text-wrapper">Nepal</span> <span class="span">Cares</span></p>
+        -->
+        <div class="text-wrapper-3"><a href="/" style="color: #000000">Home</a></div>
+        <div class="text-wrapper-4"><a href="/about" style="color: #000000">About</a></div>
+        <div class="text-wrapper-5"><a href="/discover" style="color: #000000">Discover</a></div>
+        <div class="text-wrapper-6"><a href="/contact" style="color: #000000">Contact</a></div>
+        <div class="text-wrapper-7"><a href="/joinus" style="color: #000000">Join us</a></div>
+      </div>
+
     </div>
-  </body>
+
+  </div>
+
+  <!-- Section to explore receiver-->
+  <section class="help">
+    <h1> Whom we support</h1>
+    <p>Hello, Beautiful soul. Let's listen the story of our people who are supported during their needs. </p>
+
+    <div class="row">
+      <div class="need-col">
+        <img src="images/child2.jpg" alt="image of people">
+        <h3>John</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero cupiditate, consequatur architecto illum
+          repellat molestiae asperiores aliquam ipsam pariatur in excepturi dicta nesciunt vitae! Dicta excepturi animi
+          cum ratione nihil.</p>
+      </div>
+
+      <div class="need-col">
+        <img src="images/child3.jpg" alt="image of people">
+        <h3>Kumar</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero cupiditate, consequatur architecto illum
+          repellat molestiae asperiores aliquam ipsam pariatur in excepturi dicta nesciunt vitae! Dicta excepturi animi
+          cum ratione nihil.</p>
+      </div>
+
+      <div class="need-col">
+        <img src="images/child1.jpg" alt="image of people">
+        <h3>Sam</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero cupiditate, consequatur architecto illum
+          repellat molestiae asperiores aliquam ipsam pariatur in excepturi dicta nesciunt vitae! Dicta excepturi animi
+          cum ratione nihil.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+</body>
+
 </html>

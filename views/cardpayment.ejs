@@ -12,15 +12,15 @@
 </head>
 <style>
     .donate{
-    width: 300px;
-    height: 500px;
-    background-color: #b34415;
+    width: 500px;
+    height: 700px;
+    background-color: #c94e19;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 5px;
-    box-shadow: 5px 5px 10px #9e3b11;
+    box-shadow: 5px 5px 10px #c45221;
     text-align: center;
     padding: 20px 0px ;
 }
@@ -57,40 +57,75 @@ button{
     <div class="donate">
         <h2>Donation form</h2>
         <i class="fas fa-user"></i>
-        <label for="amount">Name:</label>
+        <label for="amount" style="font-size: 25px">Name:</label>
        
 
-        <input type="text" class="input"  name="name" placeholder="Name of the card holder" required><br><br>
+        <input type="text" class="input"  name="name" placeholder="Name of the card holder" required style="font-size:25px;"><br><br>
 
         <i class="fas fa-money-bill-wave"></i>
-        <label class="label">Amount:</label>
-        <input type="number" class="input"  name="amount" placeholder="Donation amount" required><br><br>
+        <label class="label" style="font-size:25px">Amount:</label>
+        <input type="number" class="input"  name="amount" placeholder="Donation amount" required style="font-size:25px"><br><br>
         
 
         <i class="fas fa-address-book"></i>
-        <label class="label">Email:</label>
-        <input type="email" class="input"  name="email" placeholder="Email" required><br><br>
+        <label class="label" style="font-size:25px">Email:</label>
+        <input type="email" class="input"  name="email" placeholder="Email" required style="font-size:25px"><br><br>
         
 
-        <label class="label">Card number:</label>
+        <label class="label" style="font-size:25px" >Card number:</label>
         <div class="container">
             <div  class="card space icon-relative">
             <div id="card-number"></div></div><br><br>
 
             
-      <label class="label">Card Expiry:</label>
+      <label class="label" style="font-size:25px">Card Expiry:</label>
       <div class="container-exp">
         <div  class="card-item icon-relative">
           
           <div id="card-expiry"> </div></div><br><br>
 
-          <button class="btn" style="color:white">Donate.</button>
+          <button class="btn" style="color:white; background-size:">Donate.</button>
 
        
     </div>
     
         <script src="https://js.stripe.com/v3/"></script>
   <script src="./cardpayment/creditcardpayment.js"></script>
+  <script>
+    const cardNumber = elements.create('cardNumber', { style });
+cardNumber.mount('#card-number');
+const cardExpiry = elements.create('cardExpiry', { style });
+cardExpiry.mount('#card-expiry');
+const cardCvc = elements.create('cardCvc', { style });
+cardCvc.mount('#card-cvc');
+const form = document.querySelector('form');
+const errorEl = document.querySelector('#card-errors');
+
+const stripeTokenHandler = token => {
+    const hiddenInput = document.createElement('input');
+    hiddenInput.setAttribute('type', 'hidden');
+    hiddenInput.setAttribute('name', 'stripeToken');
+    hiddenInput.setAttribute('value', token.id);
+    form.appendChild(hiddenInput);
+
+    console.log(form)
+    form.submit();
+}
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    stripe.createToken(cardNumber, cardExpiry, cardCvc).then(res => {
+        if (res.error) errorEl.textContent = res.error.message;
+        else {
+            console.log(res.token)
+            stripeTokenHandler(res.token);
+        }
+    })
+})
+
+
+  </script>
             
         
 

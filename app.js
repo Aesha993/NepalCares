@@ -13,7 +13,7 @@ var profileRouter = require('./routes/profilepage');
 var signinRouter = require('./routes/signinpage');
 var donationRouter = require('./routes/donations');
 var footerRouter = require('./routes/footer');
-
+var fundraiserRouter = require('./routes/addfundraiser');
 
 var app = express();
 
@@ -38,7 +38,7 @@ app.use('/signuppage', signupRouter);
 app.use('/profilepage', profileRouter);
 app.use('/signinpage',signinRouter);
 app.use('/donation',donationRouter);
-
+app.use('/addfundraiser',fundraiserRouter)
 
 
 

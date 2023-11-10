@@ -1,11 +1,11 @@
-
+   
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>header</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
@@ -22,10 +22,10 @@
 
         body {
             height: 100vh;
-            background-color: #a19797;
-            background-image: none;
+            background-color: transparent;
+            /*background-image: url(/images/backgroung.jpg);
             background-size: cover;
-            background-position: center;
+            background-position: center;*/
         }
 
         li {
@@ -34,13 +34,13 @@
 
         * {
             text-decoration: none;
-            color: #fff;
+            color: black;
             font-size: 1rem;
 
         }
 
         a:hover {
-            color: orange;
+            color: rgb(255, 64, 0);
         }
 
         /* Header */
@@ -57,53 +57,48 @@
             align-items: center;
             position: fixed;
             justify-content: space-between;
-            z-index: 3;
+            z-index: 2;
+            color: aqua;
             transition: all 0.3s ease;
-            background-color:none;
+            background-color: none;
             /* Set your desired background color */
-            padding: 15px;
+            padding: 3px;
+            margin: 5px;
+            margin-right: auto;
             /* Add padding for better visibility */
             border-radius: 12px;
             /* Add border-radius for rounded corners */
         }
 
         .navbar .logo {
-            width: 70px;
+            /*width: 110px;*/
+
+            display: flex;
             /* Adjust the width of the logo */
-            height: 60px;
+            height: 85px;
             /* Adjust the height of the logo */
             overflow: hidden;
-        }
-
-        .navbar .logo img {
-            width: 100%;
-            /* Make sure the logo fills the container */
-            height: auto;
-            /* Maintain aspect ratio */
-        }
-
-        .navbar .logo a {
-            font-size: 1.5rem;
-            font-weight: bold;
         }
 
         .navbar .links {
             display: flex;
             gap: 6rem;
             text-align: center;
+            align-items: center;
+
         }
 
         .navbar .toggle_btn {
-            color: #fff;
+            color: #ffffff;
             font-size: 2rem;
             cursor: pointer;
             display: none;
         }
 
         .action_btn {
-            background-color: rgb(222, 193, 167);
-            color: #fff;
-            padding: 0.5rem 1rem;
+            background-color: rgb(242, 68, 5);
+            color: #ffffff;
+            padding: 0.8rem 2rem;
             border: none;
             outline: none;
             border-radius: 24px;
@@ -116,81 +111,27 @@
 
         .action_btn:hover {
             transform: scale(1.05);
-            color: #d81010;
+            color: black;
         }
 
         .action_btn:active {
             transform: scale(0.95);
         }
 
-        /* Dropdown menu */
-        .dropdown_menu {
-            display: none;
-            position: absolute;
-            right: 2rem;
-            top: 68px;
-            height: 0;
-            width: 200px;
-            /* Adjust the width of the dropdown menu */
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
-            transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        .dropdown_menu.open {
-            height: 180px;
-            /* Adjust the height of the dropdown menu */
-        }
-
-        .dropdown_menu li {
-            padding: 0.7rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .dropdown_menu .action_btn {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-
-        /* Responsive */
-        @media(max-width: 992px) {
-
-            .navbar .links,
-            .navbar .action_btn {
-                display: none;
-            }
-
-            .navbar .toggle_btn {
-                display: block;
-            }
-
-            .dropdown_menu {
-                display: block;
-            }
-        }
-
-        @media(max-width: 576px) {
-            .dropdown_menu {
-                left: 2rem;
-                width: unset;
-            }
-        }
     </style>
 </head>
 
 <body>
     <header>
         <div class="navbar">
-            <div class="logo"><img src="images/logo.png" alt="logo"></div>
+            <div class="logo"><img src="images/nepalcareslogos.png" alt="logo">
+            </div>
             <ul class="links">
-                <li> <a href="home">HOME</a></li>
-                <li> <a href="discover">DISCOVER</a></li>
-                <li> <a href="about">ABOUT</a></li>
-                <li> <a href="contact">CONTACT US</a></li>
+                <li> <a href="/home">HOME</a></li>
+                <li> <a href="/discover">DISCOVER</a></li>
+                <li> <a href="/discover">FORUMS</a></li>
+                <li> <a href="/about">ABOUT</a></li>
+                <li> <a href="/contact">CONTACT US</a></li>
             </ul>
             <a href="joinus" class="action_btn">JOIN US</a>
             <div class="toggle_btn">
@@ -198,29 +139,10 @@
             </div>
         </div>
 
-        <div class="dropdown_menu">
-            <li> <a href="home">HOME</a></li>
-            <li> <a href="discover">DISCOVER</a></li>
-            <li> <a href="about">ABOUT</a></li>
-            <li> <a href="contact">CONTACT US</a></li>
-            <li><a href="joinus" class="action_btn">JOIN US</a></li>
-        </div>
-    </header>
+      
+    
+    
 
-    <script>
-        const toggleBtn = document.querySelector('.toggle_btn')
-        const toggleBtnIcon = document.querySelector('.toggle_btn i')
-        const dropDownMenu = document.querySelector('.dropdown_menu')
-
-        toggleBtn.onclick = function () {
-            dropDownMenu.classList.toggle('open')
-            const isOpen = dropDownMenu.classList.contains('open')
-
-            toggleBtnIcon.classList = isOpen
-                ? 'fa-solid fa-xmark'
-                : 'fa-solid fa-bars'
-        }
-    </script>
 </body>
 
 </html>

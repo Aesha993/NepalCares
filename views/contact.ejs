@@ -1,4 +1,4 @@
- <!--
+<!--
  <!DOCTYPE html>
 <html>
 
@@ -364,8 +364,9 @@
             line-height: normal;
         }
     </style>
+    
     <div class="contact">
-        <!--<div class="div">
+        <!---<div class="div">
                 <footer class="footer">
                     <div class="overlap-group">
                         <div class="phone">
@@ -382,10 +383,10 @@
                             <span class="span"> | All Rights Reserved</span>
                         </p>
                     </div>
-                </footer> -->
+                </footer> ->
 
 
-        <!--<img class="location" src="img/location.png" />--
+       <!---<img class="location" src="img/location.png" >--
         <section class="location"> <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d28256.19165121283!2d85.30328010000001!3d27.7165466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1699533854121!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></section>
 
         <div class="form">
@@ -432,36 +433,445 @@
 </body>
 
 </html> 
+
 -->
+
+
+<!----
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins-Bold", Helvetica;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            height: 100vh;
+            background-color: rgb(224, 198, 198);
+            background-image: none;
+            background-size: cover;
+            background-position: center;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        * {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+
+        }
+
+        a:hover {
+            color: orange;
+        }
+
+        /*Header*/
+        header {
+            position: relative;
+            padding: 0 2rem;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            justify-content: space-between;
+            z-index: 3;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.logo.img {
+            width: 10%;
+            height: 10%;
+            display: block;
+
+        }
+
+        .navbar.logo a {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar.links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .navbar.toggle_btn {
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: none;
+        }
+
+        .action_btn {
+            background-color: orange;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: scale 0.2 ease;
+        }
+
+        .action_btn:hover {
+            scale: 1.05;
+            color: #fff;
+        }
+
+        .action_btn:active {
+            scale: 0.95;
+        }
+
+        /*Dropsown menu*/
+        .dropdown_menu {
+            display: none;
+            position: absolute;
+            right: 2rem;
+            top: 68px;
+            height: 0;
+            width: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .dropdown_menu.open {
+            height: 240px;
+        }
+
+        .dropdown_menu li {
+            padding: 0.7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dropdown_menu.action_btn {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        /*Responsive*/
+        @media(max-width:992px) {
+
+            .navbar.links,
+            .navbar.action_btn {
+                display: none;
+            }
+
+            .navbar.navbar.toggle_btn {
+                display: block;
+            }
+
+            .dropdown_menu {
+                display: block;
+            }
+        }
+        @media(max-width:576px) {
+            .dropdown_menu{
+                left: 2rem;
+                width: unset;
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><img src="images/logo.png" alt="logo"></div>
+            <ul class="links">
+
+                <li> <a href="home">HOME</a></li>
+                <li> <a href="discover">DISCOVER</a></li>
+                <li> <a href="about">ABOUT</a></li>
+                <li> <a href="contact">CONTACT US</a></li>
+            </ul>
+            <a href="jounus" class="action_btn">JOIN US</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown_menu">
+            <li> <a href="home">HOME</a></li>
+            <li> <a href="discover">DISCOVER</a></li>
+            <li> <a href="about">ABOUT</a></li>
+            <li> <a href="contact">CONTACT US</a></li>
+            <li><a href="joinus" class="action_btn">JOIN US</a></li>
+
+        </div>
+    </header>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+        
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+           
+            toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+
+</html>-->
 
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact page</title>
-     <style>
-        *{
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins-Bold", Helvetica;
         }
-        .header{
-            min-height: 100vh;
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            height: 100vh;
+            background-color: #a19797;
+            background-image: none;
+            background-size: cover;
+            background-position: center;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        * {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+
+        }
+
+        a:hover {
+            color: orange;
+        }
+
+        /* Header */
+        header {
+            position: relative;
+            padding: 1rem 2rem;
+        }
+
+        .navbar {
             width: 100%;
-
+            max-width: 1200px;
+            margin: 2 auto;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            justify-content: space-between;
+            z-index: 3;
+            transition: all 0.3s ease;
+            background-color:none;
+            /* Set your desired background color */
+            padding: 15px;
+            /* Add padding for better visibility */
+            border-radius: 12px;
+            /* Add border-radius for rounded corners */
         }
-     </style>
+
+        .navbar .logo {
+            width: 70px;
+            /* Adjust the width of the logo */
+            height: 60px;
+            /* Adjust the height of the logo */
+            overflow: hidden;
+        }
+
+        .navbar .logo img {
+            width: 100%;
+            /* Make sure the logo fills the container */
+            height: auto;
+            /* Maintain aspect ratio */
+        }
+
+        .navbar .logo a {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar .links {
+            display: flex;
+            gap: 6rem;
+            text-align: center;
+        }
+
+        .navbar .toggle_btn {
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+            display: none;
+        }
+
+        .action_btn {
+            background-color: rgb(222, 193, 167);
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border: none;
+            outline: none;
+            border-radius: 24px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            /* Change 'scale' to 'transform' */
+        }
+
+        .action_btn:hover {
+            transform: scale(1.05);
+            color: #d81010;
+        }
+
+        .action_btn:active {
+            transform: scale(0.95);
+        }
+
+        /* Dropdown menu */
+        .dropdown_menu {
+            display: none;
+            position: absolute;
+            right: 2rem;
+            top: 68px;
+            height: 0;
+            width: 200px;
+            /* Adjust the width of the dropdown menu */
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .dropdown_menu.open {
+            height: 180px;
+            /* Adjust the height of the dropdown menu */
+        }
+
+        .dropdown_menu li {
+            padding: 0.7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dropdown_menu .action_btn {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Responsive */
+        @media(max-width: 992px) {
+
+            .navbar .links,
+            .navbar .action_btn {
+                display: none;
+            }
+
+            .navbar .toggle_btn {
+                display: block;
+            }
+
+            .dropdown_menu {
+                display: block;
+            }
+        }
+
+        @media(max-width: 576px) {
+            .dropdown_menu {
+                left: 2rem;
+                width: unset;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <section class="header">
-<nav>
-    <a href="vector"></a> <img src="images/logo" alt="logo">
-</nav>
+    <header>
+        <div class="navbar">
+            <div class="logo"><img src="images/logo.png" alt="logo"></div>
+            <ul class="links">
+                <li> <a href="home">HOME</a></li>
+                <li> <a href="discover">DISCOVER</a></li>
+                <li> <a href="about">ABOUT</a></li>
+                <li> <a href="contact">CONTACT US</a></li>
+            </ul>
+            <a href="joinus" class="action_btn">JOIN US</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
 
-  </section>  
+        <div class="dropdown_menu">
+            <li> <a href="home">HOME</a></li>
+            <li> <a href="discover">DISCOVER</a></li>
+            <li> <a href="about">ABOUT</a></li>
+            <li> <a href="contact">CONTACT US</a></li>
+            <li><a href="joinus" class="action_btn">JOIN US</a></li>
+        </div>
+    </header>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
 </body>
+
 </html>
-
-
-

@@ -12,7 +12,7 @@
 </head>
 <style>
     .donate{
-    width: 500px;
+    width: 600px;
     height: 700px;
     background-color: #c94e19;
     position: absolute;
@@ -26,13 +26,13 @@
 }
 
  body{
-    background-image: url('https://th.bing.com/th/id/OIP.i69GJuURCkCLF4sDfxRr3QHaE8?pid=ImgDet&rs=1');
+    background-image: url('https://i.pinimg.com/474x/cc/f0/42/ccf042897fb329791bec2b73be8d0659--spirituality-knowledge.jpg');
 }
 
 
 h2{
     color: #431805;
-    margin: 10px;
+    margin: 5px;
     margin-bottom: 20px;
 }
 
@@ -50,17 +50,19 @@ button{
     color: #080c0f;
     background-color:#431805;
     font-weight: 999;
+    text-align:center;
 }
 
 .large-button {
-    background-color:#431805;
+    background-color:transparent;
     color: #fff;
     padding: 30px 40px; /* Increase the padding to make the button larger */
     border: none;
     border-radius: 5px;
     font-size: 16px;
-    text-align: center;
+    margin-right:30px;
     position: relative;
+    -webkit-text-size-adjust: auto;
 }
     
 
@@ -68,21 +70,21 @@ button{
 </style>
 <body>
     <div class="donate">
-        <h2 style="margin-top:100px; font-size:40px">Donation form</h2>
+        <h2 style="margin-top:100px; font-size:40px">Donation form</h2><br><br>
         <i class="fas fa-user"></i>
         <label for="amount" style="font-size: 25px">Name:</label>
        
 
-        <input type="text" class="input"  name="name" placeholder="Name of the card holder" required style="font-size:25px;"><br><br>
+        <input type="text" class="input"  name="name" placeholder="Name of the card holder" required style="font-size:25px;"><br><br><br>
 
         <i class="fas fa-money-bill-wave"></i>
-        <label class="label" style="font-size:25px">Amount:</label>
-        <input type="number" class="input"  name="amount" placeholder="Donation amount" required style="font-size:25px"><br><br>
+        <label class="label" style="font-size:25px; margin-left:1px">Amount:</label>
+        <input type="number" class="input"  name="amount" placeholder="Donation amount" required style="font-size:25px"><br><br><br>
         
 
         <i class="fas fa-address-book"></i>
         <label class="label" style="font-size:25px">Email:</label>
-        <input type="email" class="input"  name="email" placeholder="Email" required style="font-size:25px"><br><br>
+        <input type="email" class="input"  name="email" placeholder="Email" required style="font-size:25px"><br><br><br>
         
 
         <label class="label" style="font-size:25px" >Card number:</label>
@@ -97,7 +99,7 @@ button{
           
           <div id="card-expiry"> </div></div><br><br>
 
-          <button class="large-button" style="color:white; position:relative">Donate</button>
+          <button class="large-button" style="color:white; margin-top:20px; text-size-adjust: auto;">Donate</button>
 
        
     </div>

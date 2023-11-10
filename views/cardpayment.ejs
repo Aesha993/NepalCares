@@ -12,34 +12,29 @@
 </head>
 <style>
     .donate{
-    width: 500px;
+    width: 600px;
     height: 700px;
-    background-color: #c94e19;
+    background-color: #C94E19;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 5px;
-    box-shadow: 5px 5px 10px #c45221;
+    box-shadow: 5px 5px 10px #C45221;
     text-align: center;
     padding: 20px 0px ;
 }
-
  body{
-    background-image: url('https://th.bing.com/th/id/OIP.i69GJuURCkCLF4sDfxRr3QHaE8?pid=ImgDet&rs=1');
+    background-image: url('https://i.pinimg.com/474x/cc/f0/42/ccf042897fb329791bec2b73be8d0659--spirituality-knowledge.jpg');
 }
-
-
 h2{
     color: #431805;
-    margin: 10px;
+    margin: 5px;
     margin-bottom: 20px;
 }
-
 label{
     color: white;
     margin: 10px;
-
 }
 button{
     font-size: 25px;
@@ -47,61 +42,45 @@ button{
     height: 30px;
     border-radius: 5px;
     border: none;
-    color: #080c0f;
+    color: #080C0F;
     background-color:#431805;
     font-weight: 999;
+    text-align:center;
 }
-
 .large-button {
-    background-color:#431805;
+    background-color:transparent;
     color: #fff;
     padding: 30px 40px; /* Increase the padding to make the button larger */
     border: none;
     border-radius: 5px;
     font-size: 16px;
-    text-align: center;
+    margin-right:30px;
     position: relative;
+    -webkit-text-size-adjust: auto;
 }
-    
-
-
 </style>
 <body>
     <div class="donate">
-        <h2 style="margin-top:100px; font-size:40px">Donation form</h2>
+        <h2 style="margin-top:100px; font-size:40px">Donation form</h2><br><br>
         <i class="fas fa-user"></i>
         <label for="amount" style="font-size: 25px">Name:</label>
-       
-
-        <input type="text" class="input"  name="name" placeholder="Name of the card holder" required style="font-size:25px;"><br><br>
-
+        <input type="text" class="input"  name="name" placeholder="Name of the card holder" required style="font-size:25px;"><br><br><br>
         <i class="fas fa-money-bill-wave"></i>
-        <label class="label" style="font-size:25px">Amount:</label>
-        <input type="number" class="input"  name="amount" placeholder="Donation amount" required style="font-size:25px"><br><br>
-        
-
+        <label class="label" style="font-size:25px; margin-left:1px">Amount:</label>
+        <input type="number" class="input"  name="amount" placeholder="Donation amount" required style="font-size:25px"><br><br><br>
         <i class="fas fa-address-book"></i>
         <label class="label" style="font-size:25px">Email:</label>
-        <input type="email" class="input"  name="email" placeholder="Email" required style="font-size:25px"><br><br>
-        
-
+        <input type="email" class="input"  name="email" placeholder="Email" required style="font-size:25px"><br><br><br>
         <label class="label" style="font-size:25px" >Card number:</label>
         <div class="container">
             <div  class="card space icon-relative">
             <div id="card-number"></div></div><br><br>
-
-            
       <label class="label" style="font-size:25px">Card Expiry:</label>
       <div class="container-exp">
         <div  class="card-item icon-relative">
-          
           <div id="card-expiry"> </div></div><br><br>
-
-          <button class="large-button" style="color:white; position:relative">Donate</button>
-
-       
+          <button class="large-button" style="color:white; margin-top:20px; text-size-adjust: auto;">Donate</button>
     </div>
-    
         <script src="https://js.stripe.com/v3/"></script>
   <script src="./cardpayment/creditcardpayment.js"></script>
   <script>
@@ -113,21 +92,17 @@ const cardCvc = elements.create('cardCvc', { style });
 cardCvc.mount('#card-cvc');
 const form = document.querySelector('form');
 const errorEl = document.querySelector('#card-errors');
-
 const stripeTokenHandler = token => {
     const hiddenInput = document.createElement('input');
     hiddenInput.setAttribute('type', 'hidden');
     hiddenInput.setAttribute('name', 'stripeToken');
     hiddenInput.setAttribute('value', token.id);
     form.appendChild(hiddenInput);
-
     console.log(form)
     form.submit();
 }
-
 form.addEventListener('submit', e => {
     e.preventDefault();
-
     stripe.createToken(cardNumber, cardExpiry, cardCvc).then(res => {
         if (res.error) errorEl.textContent = res.error.message;
         else {
@@ -136,14 +111,6 @@ form.addEventListener('submit', e => {
         }
     })
 })
-
-
   </script>
-            
-        
-
-
-   
-    
 </body>
 </html>

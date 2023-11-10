@@ -8,12 +8,13 @@
 
 <body>
     <style>
-         .about {
+        .about {
             background-image: url('/images/donate.jpg');
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
         }
+
         .about {
             background-color: #ffffff;
             display: flex;
@@ -215,23 +216,23 @@
             line-height: normal;
         }
 
-      
-        
-
-
-        
-
-        
-    
+        .about .overlap-group .vector {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            top: 0px;
+            right: 150px;
+            left: 35px;
+        }
     </style>
     <div class="about">
-        <div class="div"> 
+        <div class="div">
             <div class="navbar">
                 <div class="overlap-group">
                     <img class="vector" src="images/logo.png" />
                 </div>
-                <p class="nepal-cares"><span class="text-wrapper" style="font-size: 60px;">Nepal</span> <span
-                        class="span" style="font-size:60px">Cares</span></p>
+                <!--<p class="nepal-cares"><span class="text-wrapper" style="font-size: 60px;">Nepal</span> <span
+                        class="span" style="font-size:60px">Cares</span></p>-->
                 <div class="text-wrapper-2" href="/">
                     <a href="/" style="color:#000000">Home</a>
                 </div>
@@ -253,14 +254,14 @@
                 <div class="text-wrapper-10">Already have an account</div>
             </div>
             <p class="and-donate-to">And donate to millions of people who need your help Right&nbsp;&nbsp;Now !!</p>
-          
+
         </div>
     </div>
 
     <footer>
         <%- include('./footer'); %>
-      </footer>
-    
+    </footer>
+
 </body>
 
 </html>

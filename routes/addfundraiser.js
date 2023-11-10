@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const Books = require('../models/donate')
+const Descriptions = require('../models/donate')
 
 router.get('/', function(req, res, next) {
   res.render('addfundraiser', { title: 'Add Fundraiser' });
@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/',async function(req,res,next){
-  await Books.insertMany([req.body]);
+  await Descriptions.insertMany([req.body]);
   res.redirect('/donation')
 })
 

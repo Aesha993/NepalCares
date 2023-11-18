@@ -16,7 +16,7 @@
         }
 
         .about {
-            background-color: #ffffff;
+            background-color: #FFFFFF;
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -24,7 +24,7 @@
         }
 
         .about .div {
-            background-color: #ffffff;
+            background-color: #FFFFFF;
             width: 1280px;
             height: 832px;
             position: relative;
@@ -82,7 +82,16 @@
         }
 
         .about .span {
-            color: #c95501;
+            color: #C95501;
+        }
+
+        .about .overlap-group .vector {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            top: 0px;
+            right: 150px;
+            left: 0px;
         }
 
         .about .text-wrapper-2 {
@@ -152,7 +161,7 @@
             left: 573px;
             font-family: "Lora-Bold", Helvetica;
             font-weight: 700;
-            color: #c95501;
+            color: #C95501;
             font-size: 40px;
             letter-spacing: 0;
             line-height: normal;
@@ -215,15 +224,6 @@
             letter-spacing: 0;
             line-height: normal;
         }
-
-        .about .overlap-group .vector {
-            position: absolute;
-            width: 80px;
-            height: 80px;
-            top: 0px;
-            right: 150px;
-            left: 35px;
-        }
     </style>
     <div class="about">
         <div class="div">
@@ -231,8 +231,7 @@
                 <div class="overlap-group">
                     <img class="vector" src="images/logo.png" />
                 </div>
-                <!--<p class="nepal-cares"><span class="text-wrapper" style="font-size: 60px;">Nepal</span> <span
-                        class="span" style="font-size:60px">Cares</span></p>-->
+
                 <div class="text-wrapper-2" href="/">
                     <a href="/" style="color:#000000">Home</a>
                 </div>
@@ -247,21 +246,20 @@
             </div>
             <div class="text-wrapper-7">Join Us</div>
             <div class="text-wrapper-8">
-                <a href="/signuppage" style="color: #000000;">Sign Up</a>
+                <button style="background-color:#c95501; font-size: 20px;"><a href="/signuppage"
+                        style="color: #000000;">Sign Up</a></button>
             </div>
             <div class="overlap">
-                <div class="text-wrapper-9"><a href="/signinpage" style="color: #000000;">Sign In</a></div>
+                <div class="text-wrapper-9"> <button style="background-color:#c95501; font-size: 20px;"><a
+                            href="/signinpage" style="color: #000000;">Sign In</a></button></div>
                 <div class="text-wrapper-10">Already have an account</div>
             </div>
             <p class="and-donate-to">And donate to millions of people who need your help Right&nbsp;&nbsp;Now !!</p>
-
         </div>
     </div>
-
     <footer>
         <%- include('./footer'); %>
     </footer>
-
 </body>
 
 </html>

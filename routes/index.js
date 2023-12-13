@@ -35,4 +35,8 @@ router.get('/cardpayment', function(req, res, next) {
   res.render('cardpayment', { title: 'NepalCares' });
 });
 
+router.get('/orgprofile', function(req, res, next) {
+  res.render('orgprofile', { title: 'organisatonal profile' });
+});
+
 module.exports = router;

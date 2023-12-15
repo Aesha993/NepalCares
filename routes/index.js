@@ -1,5 +1,9 @@
 var express = require('express');
 var router = express.Router();
+
+
+
+
 const Description = require('../models/donate')
 
 /* GET home page. */
@@ -38,5 +42,10 @@ router.get('/cardpayment', function(req, res, next) {
 router.get('/orgprofile', function(req, res, next) {
   res.render('orgprofile', { title: 'organisatonal profile' });
 });
+
+router.get('/orgprofile', function(req, res, next) {
+  res.render('forums', { title: 'forums' });
+});
+
 
 module.exports = router;

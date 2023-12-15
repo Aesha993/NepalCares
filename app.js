@@ -14,6 +14,8 @@ var signinRouter = require('./routes/signinpage');
 var donationRouter = require('./routes/donations');
 var footerRouter = require('./routes/footer');
 var fundraiserRouter = require('./routes/addfundraiser');
+var orgprofileRouter = require('./routes/orgprofile');
+var forumsRouter = require('./routes/forums');
 
 var app = express();
 
@@ -38,7 +40,10 @@ app.use('/signuppage', signupRouter);
 app.use('/profilepage', profileRouter);
 app.use('/signinpage',signinRouter);
 app.use('/donation',donationRouter);
-app.use('/addfundraiser',fundraiserRouter)
+app.use('/addfundraiser',fundraiserRouter);
+app.use('/orgprofile',orgprofileRouter);
+app.use('/forums',forumsRouter)
+
 
 
 
@@ -57,5 +62,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
 
 module.exports = app;
